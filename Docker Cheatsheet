@@ -1,0 +1,29 @@
+Docker PS: PS(process status)
+The docker ps command is used to list all the currently running containers on a Docker host. 
+When you run this command, Docker will query the Docker daemon and return a list of all the containers that are currently running.
+
+----Working with Images----
+docker images - List all available images on the local Docker host.
+docker pull <image_name> - Download a specific image from a Docker registry.
+docker build -t <image_name> <dockerfile_path> - Build a Docker image using a Dockerfile.
+docker tag <image_id> <new_tag> - Create a new tag for an existing Docker image.
+docker push <image_name> - Upload an image to a Docker registry.
+
+
+----Working with Containers----
+docker run <image_name> - Create a new container from an image and start it.
+docker ps - List all running containers on the local Docker host.
+docker stop <container_id> - Stop a running container.
+docker start <container_id> - Start a stopped container.
+docker restart <container_id> - Restart a running container.
+docker rm <container_id> - Remove a stopped container.
+docker exec <container_id> <command> - Run a command inside a running container.
+
+
+----Managing Docker Resources----
+docker network ls - List all available Docker networks on the local host.
+docker network create <network_name> - Create a new Docker network.
+docker volume ls - List all available Docker volumes on the local host.
+docker volume create <volume_name> - Create a new Docker volume.
+docker system df - Show disk usage of Docker resources on the local host.
+docker system prune - Remove unused Docker resources (images, containers, volumes, and networks).
