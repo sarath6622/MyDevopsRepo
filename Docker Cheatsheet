@@ -2,6 +2,20 @@ Docker PS: PS(process status)
 The docker ps command is used to list all the currently running containers on a Docker host. 
 When you run this command, Docker will query the Docker daemon and return a list of all the containers that are currently running.
 
+What does this command do?
+docker run -p 3000:3000 2e8c64aaf7a38dd7467763b6396d087ffe0d413b4aa3e97088703b8501a89c31 
+Answer: The command is used to start a Docker container from an image identified by the image ID 
+2e8c64aaf7a38dd7467763b6396d087ffe0d413b4aa3e97088703b8501a89c31.
+
+The -p option specifies that the container's port 3000 should be exposed and mapped to the host machine's port 3000, 
+allowing you to access the application running inside the container from your web browser or other applications.
+
+Assuming the container is running a web application that listens on port 3000, 
+you should be able to access the application by opening a web browser and navigating to http://localhost:3000.
+
+Note that the output of the docker run command may include logs or other information printed by the application running inside the container. 
+If you want to view these logs, you can use the docker logs <container_id> command.
+
 ----Working with Images----
 docker images - List all available images on the local Docker host.
 docker pull <image_name> - Download a specific image from a Docker registry.
